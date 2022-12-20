@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- VLabs Icon  -->
+    <link rel="shortcut icon" href="images/icon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/bundle.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Site Title  -->
+    <title>Virtual Labs</title>
+</head>
+
+<body class="nk-body">
+
+    <div class="nk-wrap">
+        <header class="nk-header bg-light has-overlay" id="home">
+            <div class="overlay shape shape-a"></div><!-- Overlay Shape -->
+            <div class="nk-navbar is-light is-sticky" id="navbar">
+                <div class="container">
+                    <div class="nk-navbar-wrap">
+                        <div class="nk-navbar-logo logo">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                    alt="logo">
+                            </a>
+                        </div><!-- .nk-navbar-logo -->
+                        <div class="nk-navbar-toggle d-lg-none">
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em
+                                    class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
+                        </div><!-- .nk-navbar-toggle -->
+                        <nav class="nk-navbar-menu" id="navbar-menu">
+                            <ul class="nk-menu">
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#home">Home</a>
+                                </li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#about">About
+                                        Vlabs</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" href="#team">Vlabs
+                                        Team</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" th:href="labs.html">Explore
+                                        Labs</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"
+                                        th:href="suggestion.html">Suggestion Space</a></li>
+                            </ul>
+                            <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a th:href="login.html"
+                                        class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                            </ul>
+                        </nav><!-- .nk-navbar-menu -->
+                    </div><!-- .nk-navbar-wrap -->
+                </div><!-- .container -->
+            </div><!-- .nk-navbar -->
+            <div class="nk-banner">
+                <div class="container">
+                    <div class="row g-gs align-items-center justify-content-between">
+                        <div class="col-lg-5 order-lg-last">
+                            <div class="nk-banner-image">
+                                <img src="images/bannerAni.svg" alt="">
+                            </div>
+                        </div><!-- .col -->
+                        <div class="col-lg-6">
+                            <div class="nk-banner-block">
+                                <div class="content">
+                                    <h1 class="heading">
+                                        <span>VIRTUAL LABS</span>
+                                    </h1>
+
+                                    <p>Virtual Labs is an initiative of Ministry of Education, Government
+                                        of India under the aegis of National Mission on Education through
+                                        Information and Communication Technology (NMEICT).</p>
+
+                                    <ul class="nk-banner-btns">
+                                        <li><a th:href="labs.html" class="btn">Explore Virtual Labs</a></li>
+                                        <li><a href="#about" class="btn btn-transparent scrollto"><span>About Virtual
+                                                    Labs</span><em class="icon ni ni-arrow-right"></em></a></li>
+                                    </ul>
+                                </div><!-- .content -->
+                            </div><!-- .nk-banner-block -->
+                        </div><!-- .col -->
+                    </div><!-- .row -->
+                </div><!-- .container -->
+            </div><!-- .nk-banner -->
+        </header><!-- .nk-header -->
+
+        <main class="nk-pages">
+            <section class="section section-l bg-white section-about" id="about">
+                <div class="container">
+                    <div class="section-head text-center wide-lg">
+                        <h5 class="subtitle">About the</h5>
+                        <h2 class="title">Virtual Labs</h2>
+                        <p class="lead"><strong>A Paradigm Shift in Internet-Based Remote Experimentation</strong></p>
+                        <p>Virtual Labs is a project initiated by the Ministry of Ministry of Education, Government of
+                            India,
+                            under the National Mission on Education through Information and Communication Technology.
+                            The project aims to provide remote-access to Laboratories in various disciplines of science
+                            and engineering for students at all levels from under-graduate to research.</p>
+                        <p>Virtual Labs also intends to develop a complete Learning Management System
+                            where the students can avail the various tools for learning, including additional
+                            web-resources,
+                            video-lectures, animated demonstrations and self-evaluation. There is also a component
+                            wherein costly
+                            equipment and resources are shared, which are otherwise available to only a limited number
+                            of users
+                            due to constraints on time and geographical distances.</p>
+                        <p>Virtual Labs is an Open Educational Resource that addresses the issue of lack of good lab
+                            facilities,
+                            as well as trained teachers, by making remote experimentation possible. </p>
+                    </div><!-- .section-head -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+
+            <section class="section section-l bg-light section-blog" id="team">
+                <div class="container">
+                    <div class="section-head text-center wide-lg">
+                        <h5 class="subtitle">Our</h5>
+                        <h2 class="title">VLabs Team</h2>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs justify-content-center">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="blog-item">
+                                    <div class="blog-image">
+                                        <img src="images/team1.jpg" alt="">
+                                    </div>
+                                    <div class="blog-text">
+                                        <h5 class="title">Keyur Thakkar</h5>
+                                        <p>Gujarat University<br>Ahmedabad</p>
+                                    </div>
+                                </div><!-- .blog-item -->
+                            </div><!-- .col -->
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="blog-item">
+                                    <div class="blog-image">
+                                        <img src="images/team2.jpg" alt="">
+                                    </div>
+                                    <div class="blog-text">
+                                        <h5 class="title">Dhrumil Parikh</h5>
+                                        <p>Vidyalankar Institute<br>Mumbai</p>
+                                    </div>
+                                </div><!-- .blog-item -->
+                            </div><!-- .col -->
+
+                            <div class="col-md-6 col-lg-3">
+                                <div class="blog-item">
+                                    <div class="blog-image">
+                                        <img src="images/team3.jpg" alt="">
+                                    </div>
+                                    <div class="blog-text">
+                                        <h5 class="title">Khushboo Kothari</h5>
+                                        <p> University of Delhi<br>New Delhi</p>
+                                    </div>
+                                </div><!-- .blog-item -->
+                            </div><!-- .col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="blog-item">
+                                    <div class="blog-image">
+                                        <img src="images/team4.jpg" alt="">
+                                    </div>
+                                    <div class="blog-text">
+                                        <h5 class="title">Vedika Patil</h5>
+                                        <p>Panjab University<br>Chandigarh</p>
+                                    </div>
+                                </div><!-- .blog-item -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </main><!-- .nk-pages -->
+
+        <footer class="nk-footer bg-dark tc-light has-overlay">
+            <div class="overlay shape shape-c"></div><!-- Overlay Shape -->
+            <section class="section section-footer section-m tc-light">
+                <div class="container">
+                    <div class="nk-footer-top">
+                        <div class="row g-gs gy-m">
+                            <div class="col-lg-3 col-md-9 mr-auto">
+                                <div class="wgs wgs-about">
+                                    <div class="wgs-logo logo">
+                                        <a href="./" class="logo-link">
+                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                                alt="logo">
+                                        </a>
+                                    </div>
+                                    <div class="wgs-about-text">
+                                        <p>Indian Institute Of Technology Bombay</p>
+                                        <p>Powai, Mumbai, India</p>
+                                    </div>
+                                    <ul class="wgs-social">
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-youtube-fill"></em></a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Quick Link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a class="scrollto" th:href="labs.html">Explore Labs</a></li>
+                                        <li><a class="scrollto" href="#team">Vlabs Team</a></li>
+                                        <li><a class="scrollto" href="#about">About Vlabs</a></li>
+                                        <li><a class="scrollto" th:href="suggestion.html">Suggestion Space</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-3">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Helpfull link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="#">Vlabs IIT Bombay</a></li>
+                                        <li><a href="#">Vlabs Dev</a></li>
+                                        <li><a href="#">Vlabs Outreach</a></li>
+                                        <li><a href="#">Shakshat Portal</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-top -->
+                    <div class="nk-footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a
+                                        href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <ul class="nk-footer-links justify-content-md-end">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-bottom -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </footer><!-- .nk-footer -->
+    </div><!-- .nk-wrap -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js?ver=112"></script>
+</body>
+
+</html>

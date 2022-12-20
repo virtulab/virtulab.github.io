@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business Communication</title>
+        <script src="js/app.js" defer></script>
+        <script src="js/Keyur_geometry.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <canvas id="mycanvas" class="myCanvas" width="800px" height="600px"></canvas> 
+      
+      <div id="form-box">
+        <form>
+          <header>
+            <h1>Course Feedback</h1>
+          </header>
+
+          <div class="frm">
+            <label for="cource">
+              1) Did you like the course?
+            </label><br>
+
+            <div class="inp1">
+              <input type="checkbox">Yes
+              <input type="checkbox">No<br><br>
+            </div>
+            
+            <label for="rate">
+              2) How much will you rate this course where 1-average and 5-excellent?
+            </label>
+            
+            <div class="inp2">
+              <select id="Rate">
+                <option>Rate</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select><br><br>
+            </div>
+
+            <label>
+              3) What was the best things you liked about the course?
+            </label><br>
+            
+            <div class="inp1">
+              <input type="checkbox" class="form-control">Course Content
+              <input type="checkbox" class="form-control">Innovative
+              <input type="checkbox" class="form-control">Clarity
+              <input type="checkbox" class="form-control">All of the above<br><br>
+            </div>
+
+            <label>
+              4) Do you think this course needs to be improved further? If yes, please write a few words to highlight the areas to be improved upon.
+            </label><br>
+
+            <textarea class="inp2" id="improve" rows="3" placeholder="Type here..."></textarea><br>
+          </div>
+          
+          <input type="submit" class="btn" onclick="Abhar()">
+        </form>
+      </div>
+    </body>
+</html>
+
+<script>
+  function Abhar() {
+    alert("Thank you for responce");
+  }
+  function disn() {
+    document.getElementById('form-box1').style.display = "none";
+  }
+</script>

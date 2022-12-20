@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- VLabs Icon  -->
+    <link rel="shortcut icon" href="images/icon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/bundle.css?ver=112">
+    <link rel="stylesheet" href="css/style.css?ver=112">
+
+    <!-- Site Title  -->
+    <title>Virtual Labs</title>
+</head>
+
+<body class="nk-body">
+
+    <div class="nk-wrap">
+        <header class="nk-header bg-light has-overlay" id="home">
+            <div class="overlay shape shape-a"></div><!-- Overlay Shape -->
+            <div class="nk-navbar is-light is-sticky" id="navbar">
+                <div class="container">
+                    <div class="nk-navbar-wrap">
+                        <div class="nk-navbar-logo logo">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                    alt="logo">
+                            </a>
+                        </div><!-- .nk-navbar-logo -->
+                        <div class="nk-navbar-toggle d-lg-none">
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em
+                                    class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
+                        </div><!-- .nk-navbar-toggle -->
+                        <nav class="nk-navbar-menu" id="navbar-menu">
+                            <ul class="nk-menu">
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html">Home</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html#about">About Vlabs</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html#team">Vlabs Team</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" th:href="labs.html">Explore
+                                        Labs</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"
+                                        th:href="suggestion.html">Suggestion Space</a></li>
+                            </ul>
+                            <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="login.html"
+                                        class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                            </ul>
+                            <!-- <ul class="nk-menu-btns">
+                                <div th:if="${login==false}">
+                                    <li class="nk-menu-item"><a th:href="login.html"
+                                            class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                                </div>
+                                <div th:if="${login==true}">
+                                    <li class="nk-menu-item"><a th:href="@{/logout}"
+                                            class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
+                                </div>
+                            </ul> -->
+                        </nav><!-- .nk-navbar-menu -->
+                    </div><!-- .nk-navbar-wrap -->
+                </div><!-- .container -->
+            </div><!-- .nk-navbar -->
+            <div class="nk-page-head">
+                <div class="container">
+                    <div class="nk-page-head-wrap">
+                        <div class="nk-page-head-text">
+                            <h5 class="subtitle">Explore Labs</h5>
+                            <h2 class="title">Designed For Various Disciplines</h2>
+                        </div><!-- .nk-banner-block -->
+                        <div class="nk-page-head-image">
+                            <img src="images/banner.svg" alt="">
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </div><!-- .nk-banner -->
+        </header><!-- .nk-header -->
+
+        <main class="nk-pages">
+            <section class="section section-l bg-white section-faq" id="faq">
+                <div class="container">
+                    <div class="section-head text-center">
+                        <h5 class="subtitle">List Of</h5>
+                        <h2 class="title">Approved Labs</h2>
+                    </div><!-- .section-head -->
+                    <div class="section-content">
+                        <div class="row g-gs">
+                            <div class="col-lg-4">
+                                <ul class="nav nav-tabs nav-tabs-vr nav-tabs-btns">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#covid-basics">Business
+                                            Communication and Ethics</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#covid-spreads">Computer Science and
+                                            Engineering</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#covid-protect">Electronics and
+                                            Communications</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#covid-symptoms">Electronics and
+                                            Telecommunication</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#covid-outbreak">Mathematics</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#covid-myth">Mechanical
+                                            Engineering</a>
+                                    </li>
+                                </ul><!-- .nav-tabs -->
+                            </div><!-- .col -->
+                            <div class="col-lg-8">
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="covid-basics">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#covid-basics-01">Presentation Skills <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-basics-01" class="collapse show">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the presentation skills amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a th:href="presentation-skills.html"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Presentation Skills Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-basics-02">Communication Skills <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-basics-02" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the communication skills amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Communication Skills Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-basics-03">Business Communication <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-basics-03" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This experiment deals with Business
+                                                            Communication as an important aspect of Interpersonal
+                                                            skills. The experiment aims to evaluate the theoretical
+                                                            knowledge garnered by the user by bringing to forefront a
+                                                            series of questions and situational cases involving the
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a th:href="business-communication.html"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Business Communication Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-basics-04">Technical Communication <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-basics-04" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This experiment deals with Technical
+                                                            Communication as an important aspect of Interpersonal
+                                                            skills. The experiment aims to evaluate the theoretical
+                                                            knowledge garnered by the user by bringing to forefront a
+                                                            series of questions and situational cases involving the
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Technical Communication Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="covid-spreads">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#covid-spreads-01">Basics of HTML <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-spreads-01" class="collapse show">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of HTML amassed by the user by bringing to the
+                                                            forefront a series of questions and cases involving
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore Basics
+                                                                of HTML Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-spreads-02">Computer Graphics <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-spreads-02" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the computer graphics amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Computer Graphics Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-spreads-03">Introduction to PHP <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-spreads-03" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of PHP amassed by the user by bringing to the
+                                                            forefront a series of questions and cases involving
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Introduction to PHP Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-spreads-04">Computer Networks <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-spreads-04" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of computer networks amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Computer Networks Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-spreads-05">Computer Networking and Security
+                                                    <span class="accordion-icon"></span>
+                                                </h5>
+                                                <div id="covid-spreads-05" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of computer networking and security amassed by the
+                                                            user by bringing to the forefront a series of questions and
+                                                            cases involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Computer Networking and Security Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-spreads-06">Database <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-spreads-06" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of database amassed by the user by bringing to the
+                                                            forefront a series of questions and cases involving
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Database Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="covid-protect">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#covid-protect-01">Digital Electronics <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-protect-01" class="collapse show">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of digital electronics amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Digital Electronics Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-protect-02">Digital Logic Design <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-protect-02" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of digital logic design amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Digital Logic Design Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-protect-03">Digital Applications <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-protect-03" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of digital applications amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Digital Applications Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-protect-04">8051 Microcontroller <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-protect-04" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of 8051 microcontroller amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore 8051
+                                                                Microcontroller Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-protect-05">Machine Learning <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-protect-05" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab helps you in understanding the basics
+                                                            of machine learning - the types of perceptrons, the learning
+                                                            rules, fuzzy inference engine via visualizations. At the
+                                                            same time it also helps you get to know the theory and
+                                                            consolidate it using the pretest and posttest for each
+                                                            experiment.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Machine Learning Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="covid-symptoms">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#covid-symptoms-01">Basic Electronics <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-symptoms-01" class="collapse show">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of basic electronics amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore Basic
+                                                                Electronics Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-symptoms-02">Digital Logic Design Using Gates
+                                                    <span class="accordion-icon"></span>
+                                                </h5>
+                                                <div id="covid-symptoms-02" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the digital logic design using gates amassed by
+                                                            the user by bringing to the forefront a series of questions
+                                                            and cases involving application of the theories. This will
+                                                            be accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Digital Logic Design Using Gates Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-symptoms-03">Electric Circuits <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-symptoms-03" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of electric circuits amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Electric Circuits Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-symptoms-04">Signals and Systems <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-symptoms-04" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of signals and systems amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Signals and Systems Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="covid-outbreak">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#covid-outbreak-01">Numerical Methods <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-outbreak-01" class="collapse show">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the numerical methods amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Numerical Methods Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-outbreak-02">Equation Grapher <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-outbreak-02" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the equation grapher amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Equation Grapher Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-outbreak-03">Calculus Grapher <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-outbreak-03" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the Calculus Grapher amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Calculus Grapher Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-outbreak-04">Estimation <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-outbreak-04" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the estimation amassed by the user by bringing
+                                                            to the forefront a series of questions and cases involving
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Estimation Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-outbreak-05">Vector Addition <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-outbreak-05" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the vector addition amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore Vector
+                                                                Addition Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-outbreak-06">Plinko Probability <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-outbreak-06" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the plinko probability amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore Plinko
+                                                                Probability Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="covid-myth">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title" data-toggle="collapse"
+                                                    data-target="#covid-myth-01">Dynamics of Machines <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-myth-01" class="collapse show">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of dynamics of machines amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Dynamics of Machines Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-myth-02">Model Based Fault Detection <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-myth-02" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the model based fault detection amassed by the
+                                                            user by bringing to the forefront a series of questions and
+                                                            cases involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore Model
+                                                                Based Fault Detection Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-myth-03">Metal Forming <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-myth-03" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of metal forming amassed by the user by bringing
+                                                            to the forefront a series of questions and cases involving
+                                                            application of the theories. This will be accompanied by a
+                                                            thorough assessment process where the user’s current skill
+                                                            set shall be evaluated and the areas to be improved upon
+                                                            recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore Metal
+                                                                Forming Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-myth-04">Machine Dynamics and Vibration <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-myth-04" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of machine dynamics and vibration amassed by the
+                                                            user by bringing to the forefront a series of questions and
+                                                            cases involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Machine Dynamics and Vibration Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h5 class="accordion-title collapsed" data-toggle="collapse"
+                                                    data-target="#covid-myth-05">Micromachining <span
+                                                        class="accordion-icon"></span></h5>
+                                                <div id="covid-myth-05" class="collapse">
+                                                    <div class="accordion-content">
+                                                        <p class="mb-1">This lab aims to evaluate the theoretical
+                                                            knowledge of the micromachining amassed by the user by
+                                                            bringing to the forefront a series of questions and cases
+                                                            involving application of the theories. This will be
+                                                            accompanied by a thorough assessment process where the
+                                                            user’s current skill set shall be evaluated and the areas to
+                                                            be improved upon recommended accordingly.</p>
+                                                        <a href="#about"
+                                                            class="btn btn-transparent float-right"><span>Explore
+                                                                Micromachining Lab</span><em
+                                                                class="icon ni ni-arrow-right"></em></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- .tab-content -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .section-content -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </main><!-- .nk-pages -->
+
+        <footer class="nk-footer bg-dark tc-light has-overlay">
+            <div class="overlay shape shape-c"></div><!-- Overlay Shape -->
+            <section class="section section-footer section-m tc-light">
+                <div class="container">
+                    <div class="nk-footer-top">
+                        <div class="row g-gs gy-m">
+                            <div class="col-lg-3 col-md-9 mr-auto">
+                                <div class="wgs wgs-about">
+                                    <div class="wgs-logo logo">
+                                        <a href="./" class="logo-link">
+                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                                alt="logo">
+                                        </a>
+                                    </div>
+                                    <div class="wgs-about-text">
+                                        <p>Indian Institute Of Technology Bombay</p>
+                                        <p>Powai, Mumbai, India</p>
+                                    </div>
+                                    <ul class="wgs-social">
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-youtube-fill"></em></a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Quick Link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a class="scrollto" th:href="labs.html">Explore Labs</a></li>
+                                        <li><a class="scrollto" th:href="index.html#team">Vlabs Team</a></li>
+                                        <li><a class="scrollto" th:href="index.html#about">About Vlabs</a></li>
+                                        <li><a class="scrollto" th:href="suggestion.html">Suggestion Space</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-3">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Helpfull link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="#">Vlabs IIT Bombay</a></li>
+                                        <li><a href="#">Vlabs Dev</a></li>
+                                        <li><a href="#">Vlabs Outreach</a></li>
+                                        <li><a href="#">Shakshat Portal</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-top -->
+                    <div class="nk-footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a
+                                        href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <ul class="nk-footer-links justify-content-md-end">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-bottom -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </footer><!-- .nk-footer -->
+    </div><!-- .nk-wrap -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js?ver=112"></script>
+</body>
+
+</html>

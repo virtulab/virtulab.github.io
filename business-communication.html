@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- VLabs Icon  -->
+    <link rel="shortcut icon" href="images/icon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/bundle.css?ver=112">
+    <link rel="stylesheet" href="css/style.css?ver=112">
+
+    <!-- Site Title  -->
+    <title>Virtual Labs</title>
+</head>
+
+<body class="nk-body">
+
+    <div class="nk-wrap">
+        <header class="nk-header bg-light has-overlay" id="home">
+            <div class="overlay shape shape-a"></div><!-- Overlay Shape -->
+            <div class="nk-navbar is-light is-sticky" id="navbar">
+                <div class="container">
+                    <div class="nk-navbar-wrap">
+                        <div class="nk-navbar-logo logo">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                    alt="logo">
+                            </a>
+                        </div><!-- .nk-navbar-logo -->
+                        <div class="nk-navbar-toggle d-lg-none">
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em
+                                    class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
+                        </div><!-- .nk-navbar-toggle -->
+                        <nav class="nk-navbar-menu" id="navbar-menu">
+                            <ul class="nk-menu">
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html">Home</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html#about">About Vlabs</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link"
+                                        th:href="index.html#team">Vlabs Team</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" th:href="labs.html">Explore
+                                        Labs</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"
+                                        th:href="suggestion.html">Suggestion Space</a></li>
+                            </ul>
+                            <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="login.html"
+                                        class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                            </ul>
+                            <!-- <ul class="nk-menu-btns">
+                                <div th:if="${login==false}">
+                                    <li class="nk-menu-item"><a th:href="login.html"
+                                            class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                                </div>
+                                <div th:if="${login==true}">
+                                    <li class="nk-menu-item"><a th:href="@{/logout}"
+                                            class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
+                                </div>
+                            </ul> -->
+                        </nav><!-- .nk-navbar-menu -->
+                    </div><!-- .nk-navbar-wrap -->
+                </div><!-- .container -->
+            </div><!-- .nk-navbar -->
+            <div class="nk-page-head">
+                <div class="container">
+                    <div class="nk-page-head-wrap">
+                        <div class="nk-page-head-text">
+                            <h5 class="subtitle">Business Communication and Ethics</h5>
+                            <h2 class="title">Business Communication</h2>
+                        </div><!-- .nk-banner-block -->
+                        <div class="nk-page-head-image">
+                            <img src="images/banner.svg" alt="">
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </div><!-- .nk-banner -->
+        </header><!-- .nk-header -->
+
+        <main class="nk-pages">
+            <section class="section section-l bg-white section-faq" id="faq">
+                <div class="container">
+                    <!-- Section -->
+                    <div class="pt-0">
+                        <div class="container mt-n5">
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Tab -->
+                                    <nav>
+                                        <div class="nav nav-tabs flex-column flex-md-row shadow-sm border-soft justify-content-around bg-white rounded lab-nav-tabs mb-3 py-3"
+                                            id="nav-tab" role="tablist">
+                                            <a class="nav-item nav-link lab-nav-link active" id="pre-test-tab"
+                                                data-toggle="tab" href="#pre-test" role="tab" aria-controls="pre-test"
+                                                aria-selected="true"><i
+                                                    class="icon ni ni-clipboad-check-fill"></i>Pre-Test</a>
+                                            <a class="nav-item nav-link lab-nav-link" id="procedure-tab"
+                                                data-toggle="tab" href="#procedure" role="tab" aria-controls="procedure"
+                                                aria-selected="false"><i class="icon ni ni-todo-fill"></i>Procedure</a>
+                                            <a class="nav-item nav-link lab-nav-link" id="simulation-tab"
+                                                data-toggle="tab" href="#simulation" role="tab"
+                                                aria-controls="simulation" aria-selected="false"><i
+                                                    class="icon ni ni-template-fill"></i>Simulation</a>
+                                            <a class="nav-item nav-link lab-nav-link" id="references-tab"
+                                                data-toggle="tab" href="#references" role="tab"
+                                                aria-controls="references" aria-selected="false"><i
+                                                    class="icon ni ni-book-fill"></i>References</a>
+                                        </div>
+                                    </nav>
+                                    <!-- Tab -->
+                                    <div class="tab-content mt-4 mt-lg-5" id="nav-tabContent">
+                                        <!-- Pre-Test Tab -->
+                                        <div class="tab-pane fade show active" id="pre-test" role="tabpanel"
+                                            aria-labelledby="pre-test-tab">
+                                            <div class="text-center">
+                                                <p class="mt-5">This simulation does not require the pre-test. You can
+                                                    directly jump to the simulation.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Procedure Tab -->
+                                        <div class="tab-pane fade" id="procedure" role="tabpanel"
+                                            aria-labelledby="procedure-tab">
+                                            <div class="text-center">
+                                                <p class="mt-5">This simulation does not require the procedure. You can
+                                                    directly jump to the simulation.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Simulation Tab -->
+                                        <div class="tab-pane fade" id="simulation" role="tabpanel"
+                                            aria-labelledby="simulation-tab">
+                                            <div id="canvastab" class="row">
+                                                <div class="col-12">
+                                                    <!-- <p style="font-size: 16px;"><a target="_blank" href="round-template/experiment/simulation/simulator.html"> Click here for simulation</a></p> -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- References Tab -->
+                                        <div class="tab-pane fade" id="references" role="tabpanel"
+                                            aria-labelledby="references-tab">
+                                            <div class="row justify-content-between">
+                                                <div class="col-md-10 mx-auto">
+                                                    <p>
+                                                        1. Hall, Edward, T. <i>The Silent Language.</i> Greenwich,
+                                                        Conn,: Fawcett, 1959.
+                                                    </p>
+                                                    <p>
+                                                        2. Amos, Julie-Ann. <i>Handling Tough Job Interviews.</i>
+                                                        Mumbai: Jaico Publishing, 2004.
+                                                    </p>
+                                                    <p>
+                                                        3. Hasson, Gill. <i>Brilliant Communication Skills.</i> Great
+                                                        Britain: Pearson Education, 2012.
+                                                    </p>
+                                                    <p>
+                                                        4. Thill, John V. & Courtland L. Bovée, Excellence in Business
+                                                        Communication, 10th edition. Boston : Pearson, 2013.
+                                                    </p>
+                                                    <p>
+                                                        5. Rutherford, Andrea J. Basic Communication Skills for
+                                                        Technology: Second Edition. Delhi: Pearson Education, 2007.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of tab -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </main><!-- .nk-pages -->
+
+        <footer class="nk-footer bg-dark tc-light has-overlay">
+            <div class="overlay shape shape-c"></div><!-- Overlay Shape -->
+            <section class="section section-footer section-m tc-light">
+                <div class="container">
+                    <div class="nk-footer-top">
+                        <div class="row g-gs gy-m">
+                            <div class="col-lg-3 col-md-9 mr-auto">
+                                <div class="wgs wgs-about">
+                                    <div class="wgs-logo logo">
+                                        <a href="./" class="logo-link">
+                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                                alt="logo">
+                                        </a>
+                                    </div>
+                                    <div class="wgs-about-text">
+                                        <p>Indian Institute Of Technology Bombay</p>
+                                        <p>Powai, Mumbai, India</p>
+                                    </div>
+                                    <ul class="wgs-social">
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-youtube-fill"></em></a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Quick Link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a class="scrollto" th:href="labs.html">Explore Labs</a></li>
+                                        <li><a class="scrollto" th:href="index.html#team">Vlabs Team</a></li>
+                                        <li><a class="scrollto" th:href="index.html#about">About Vlabs</a></li>
+                                        <li><a class="scrollto" th:href="suggestion.html">Suggestion Space</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-3">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Helpfull link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="#">Vlabs IIT Bombay</a></li>
+                                        <li><a href="#">Vlabs Dev</a></li>
+                                        <li><a href="#">Vlabs Outreach</a></li>
+                                        <li><a href="#">Shakshat Portal</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-top -->
+                    <div class="nk-footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a
+                                        href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <ul class="nk-footer-links justify-content-md-end">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-bottom -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </footer><!-- .nk-footer -->
+    </div><!-- .nk-wrap -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js?ver=112"></script>
+    <script>
+        $("#simulation-tab").on('shown.bs.tab', function () {
+            document.getElementById("canvastab").innerHTML += '<iframe id="fraDisabled" src="business-communication/simulation/index.html" frameborder="0" scrolling="auto" onMyLoad="disableContextMenu();" style="height: 620px; width: 1200px;"> </iframe>';
+            $('#simulation-tab').off();
+        })
+    </script>
+</body>
+
+</html>

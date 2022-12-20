@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Business Communication & Ethics</title>
+        <script src="js/app.js" defer></script>
+        <script src="js/Keyur_geometry.js"></script>
+        <script src="js/Shubham_geometry.js"></script>
+        <script src="js/Neel_geometry.js"></script>
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <canvas id="mycanvas" class="myCanvas" width="800px" height="600px"></canvas> 
+        
+      <div id="form-box1">
+        <form>
+          <header>
+            <h1>Performance Feedback</h1>
+          </header>
+
+          <div class="frm">
+            <label for="cource">
+              1) Please rate your confidence level based on your performance in Public Speaking?
+            </label><br>
+            
+            <div class="inp1">
+              <input type="checkbox">Very Confident
+              <input type="checkbox">Less Confident
+              <input type="checkbox">Confident<br><br>
+            </div>
+
+            <label for="rate">
+              2) How would you rank your performance in this test in the scale of 1-10 where 1 is below average and 10 is Excellent?
+            </label>
+            
+            <div class="inp2">
+              <select id="Rate">
+                <option>Rate</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select><br><br>
+            </div>
+          </div>  
+
+          <button type="button" class="btn" onclick="disn()">Submit</button>
+        </form>
+      </div>
+      
+      <div id="form-box">
+        <form>
+          <header>
+            <h1>Course Feedback</h1>
+          </header>
+
+          <div class="frm">
+            <label for="cource">
+              1) Did you like the course?
+            </label><br>
+
+            <div class="inp1">
+              <input type="checkbox">Yes
+              <input type="checkbox">No<br><br>
+            </div>
+            
+            <label for="rate">
+              2) How much will you rate this course where 1-average and 5-excellent?
+            </label>
+            
+            <div class="inp2">
+              <select id="Rate">
+                <option>Rate</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select><br><br>
+            </div>
+
+            <label>
+              3) What was the best things you liked about the course?
+            </label><br>
+            
+            <div class="inp1">
+              <input type="checkbox" class="form-control">Course Content
+              <input type="checkbox" class="form-control">Innovative
+              <input type="checkbox" class="form-control">Clarity
+              <input type="checkbox" class="form-control">All of the above<br><br>
+            </div>
+
+            <label>
+              4) Do you think this course needs to be improved further? If yes, please write a few words to highlight the areas to be improved upon.
+            </label><br>
+
+            <textarea class="inp2" id="improve" rows="3" placeholder="Type here..."></textarea><br>
+          </div>
+          
+          <input type="submit" class="btn" onclick="Abhar()">
+        </form>
+      </div>
+
+      <!-- GD & PI-->
+
+      <img src="images/scene2.png" id="s2">
+      <img src="images/pi1.png" id="pi1">
+      <img src="images/ravina.jpg" id="host1">
+      <img src="images/lady.png" id="lady">
+      <img src="images/lvl3.png" id="lvl3">
+      <img src="images/lvl4_1.jpg" id="lvl4_1">
+      <img src="images/lvl4_2.jpg" id="lvl4_2">
+      <img src="images/lvl4_3.jpg" id="lvl4_3">
+      <img src="images/lvl4_4.png" id="lvl4_4">
+      
+      <img src="images/meeting.jpg" id="gd1">
+    </body>
+
+    <!-- For PI-->
+
+    <div id="PI_self">
+      <form>
+        <header>
+          <h1>SELF-ANALYSIS</h1>
+        </header>
+
+        <div class="frm">
+          <label for="cource">
+            1) Please rate your confidence level based on your performance in Interview?
+          </label><br>
+          
+          <div class="inp1">
+            <input type="checkbox">Very Confident
+            <input type="checkbox">Confident
+            <input type="checkbox">Less Confident
+            <br><br>
+          </div>
+
+          <label for="rate">
+            2) How would you rank your performance in this test in the scale of 1-10 where 1 is below average and 10 is Excellent?
+          </label>
+          
+          <div class="inp2">
+            <select id="Rate">
+              <option>Rate</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select><br><br>
+          </div>
+        </div>  
+
+        <button type="button" class="btn" value="SUBMIT" onclick="disn();">SUBMIT</button>
+      </form>
+    </div>
+
+    <!-- For GD-->
+      
+    <div id="GD_self">
+      <form>
+        <header>
+          <h1>SELF-ANALYSIS</h1>
+        </header>
+
+        <div class="frm">
+          <label for="cource">
+            1) Please rate your confidence level based on your performance in GD?
+          </label><br>
+          
+          <div class="inp1">
+            <input type="checkbox">Very Confident
+            <input type="checkbox">Confident
+            <input type="checkbox">Less Confident
+            <br><br>
+          </div>
+
+          <label for="rate">
+            2) How would you rank your performance in this test in the scale of 1-10 where 1 is below average and 10 is Excellent?
+          </label>
+          
+          <div class="inp2">
+            <select id="Rate">
+              <option>Rate</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+            </select><br><br>
+          </div>
+        </div>  
+
+        <button type="button" class="btn" value="SUBMIT" onclick="disn();">SUBMIT</button>
+      </form>
+    </div>
+</html>
+
+<script>
+  function Abhar() {
+    alert("Thank you for responce");
+  }
+  function disn() {
+    document.getElementById('form-box1').style.display = "none";
+    document.getElementById('PI_self').style.display = "none";
+    document.getElementById('GD_self').style.display = "none";
+  }
+</script>

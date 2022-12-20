@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "rootDir": "./simulation/TS",
+
+    "outDir": "./simulation/jS",
+
+    "lib": ["DOM", "ES2015"],
+
+    "target": "es6",
+
+    "module": "commonJS",
+    "watch":true,
+    "sourceMap": true,
+    "allowJs": true,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "removeComments": false,
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "lab-manual/*.js",
+    "./simulation/jS/*.ob.js",
+    "./simulation/jS/*.js"
+  ]
+}

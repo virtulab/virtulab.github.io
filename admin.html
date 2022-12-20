@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- VLabs Icon  -->
+    <link rel="shortcut icon" href="images/icon.svg">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/bundle.css?ver=112">
+    <link rel="stylesheet" href="css/style.css?ver=112">
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-2.0.3.css" />
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap4.css">
+
+    <!-- Site Title  -->
+    <title>Virtual Labs</title>
+</head>
+
+<body class="nk-body">
+
+    <div class="nk-wrap">
+        <header class="nk-header bg-light has-overlay" id="home">
+            <div class="overlay shape shape-a"></div><!-- Overlay Shape -->
+            <div class="nk-navbar is-light is-sticky" id="navbar">
+                <div class="container">
+                    <div class="nk-navbar-wrap">
+                        <div class="nk-navbar-logo logo">
+                            <a href="./" class="logo-link">
+                                <img class="logo-dark" src="images/logo-dark.svg" srcset="images/logo-dark2x.svg 2x"
+                                    alt="logo">
+                                <img class="logo-light" src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                    alt="logo">
+                            </a>
+                        </div><!-- .nk-navbar-logo -->
+                        <div class="nk-navbar-toggle d-lg-none">
+                            <a href="#" class="toggle" data-menu-toggle="navbar-menu"><em
+                                    class="icon-menu icon ni ni-menu"></em><em
+                                    class="icon-close icon ni ni-cross"></em></a>
+                        </div><!-- .nk-navbar-toggle -->
+                        <nav class="nk-navbar-menu" id="navbar-menu">
+                            <ul class="nk-menu">
+                                <!-- <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="index.html">Home</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="index.html#about">About Vlabs</a></li>
+                                <li class="nk-menu-item"><a class="scrollto nav-link nk-menu-link" th:href="index.html#team">Vlabs Team</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link"  th:href="labs.html">Explore Labs</a></li>
+                                <li class="nk-menu-item"><a class="nav-link nk-menu-link" href="suggestion.html">Suggestion Space</a></li> -->
+                            </ul>
+                            <ul class="nk-menu-btns">
+                                <li class="nk-menu-item"><a href="login.html"
+                                        class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                            </ul>
+                            <!-- <ul class="nk-menu-btns">
+                                <div th:if="${login==false}">
+                                    <li class="nk-menu-item"><a th:href="login.html"
+                                            class="btn btn-sm scrollto nav-link">LOGIN</a></li>
+                                </div>
+                                <div th:if="${login==true}">
+                                    <li class="nk-menu-item"><a th:href="@{/logout}"
+                                            class="btn btn-sm scrollto nav-link">LOGOUT</a></li>
+                                </div>
+                            </ul> -->
+                        </nav><!-- .nk-navbar-menu -->
+                    </div><!-- .nk-navbar-wrap -->
+                </div><!-- .container -->
+            </div><!-- .nk-navbar -->
+            <div class="nk-page-head">
+                <div class="container">
+                    <div class="nk-page-head-wrap">
+                        <div class="nk-page-head-text">
+                            <h5 class="subtitle">Admin</h5>
+                            <h2 class="title">Virtual Labs Dashboard</h2>
+                        </div><!-- .nk-banner-block -->
+                        <div class="nk-page-head-image">
+                            <img src="images/banner.svg" alt="">
+                        </div>
+                    </div>
+                </div><!-- .container -->
+            </div><!-- .nk-banner -->
+        </header><!-- .nk-header -->
+
+        <main class="nk-pages">
+            <section class="section section-l bg-light section-faq" id="faq">
+                <div class="container">
+                    <div class="row js-appear-enabled animated fadeIn" data-toggle="appear">
+                        <!-- Row #1 -->
+                        <div class="col-6 col-xl-3">
+                            <a class="block block-link-shadow text-right bg-white admin-block">
+                                <div class="block-content block-content-full clearfix">
+                                    <div class="float-left mt-2 d-none d-sm-block">
+                                        <i class="icon ni ni-monitor text-body-bg-dark counter-icon"></i>
+                                    </div>
+                                    <div class="counter counter-num" data-count="1951">0</div>
+                                    <div class="text-uppercase counter-label">WORKSHOPS</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-3">
+                            <a class="block block-link-shadow text-right bg-white admin-block">
+                                <div class="block-content block-content-full clearfix">
+                                    <div class="float-left mt-2 d-none d-sm-block">
+                                        <i class="icon ni ni-building text-body-bg-dark counter-icon"></i>
+                                    </div>
+                                    <div class="counter counter-num" data-count="1223">0</div>
+                                    <div class="text-uppercase counter-label">Nodal Centers</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-3">
+                            <a class="block block-link-shadow text-right bg-white admin-block">
+                                <div class="block-content block-content-full clearfix">
+                                    <div class="float-left mt-2 d-none d-sm-block">
+                                        <i class="icon ni ni-bulb text-body-bg-dark counter-icon"></i>
+                                    </div>
+                                    <div class="counter counter-num" data-count="2">0</div>
+                                    <div class="text-uppercase counter-label">Labs Developed</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-6 col-xl-3">
+                            <a class="block block-link-shadow text-right bg-white admin-block">
+                                <div class="block-content block-content-full clearfix">
+                                    <div class="float-left mt-2 d-none d-sm-block">
+                                        <i class="icon ni ni-users text-body-bg-dark counter-icon"></i>
+                                    </div>
+                                    <div class="counter counter-num" th:utext="${totalRegisteredUsers}">0</div>
+                                    <div class="text-uppercase counter-label">Registered Users</div>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- END Row #1 -->
+                    </div>
+                </div><!-- .container --> <br>
+
+                <!-- <div class="container">
+                <div class="section-content section-content-boxed"> 
+                    <div class="col-md-12 col-lg-12">
+                        <div class="card visitors-map vmap-card">
+                            <div class="header">
+                                <h4 class="title">Visitors Statistics</h4>                        
+                            </div>
+                            <div class="map-body">
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-7 col-md-12">
+                                        <div id="world-map-markers" class="jvector-map"></div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-5 col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Contrary</th>
+                                                        <th>2020</th>
+                                                        <th>2021</th>
+                                                        <th>Change</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>India</td>
+                                                        <td>2,009</td>
+                                                        <td>2,901</td>
+                                                        <td>9.01% <i class="zmdi zmdi-trending-up text-success"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>USA</td>
+                                                        <td>2,009</td>
+                                                        <td>3,591</td>
+                                                        <td>7.01% <i class="zmdi zmdi-trending-up text-success"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Canada</td>
+                                                        <td>1,129</td>
+                                                        <td>1,361</td>
+                                                        <td>3.01% <i class="zmdi zmdi-trending-up text-success"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Australia</td>
+                                                        <td>954</td>
+                                                        <td>901</td>
+                                                        <td>5.71% <i class="zmdi zmdi-trending-down text-warning"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Germany</td>
+                                                        <td>594</td>
+                                                        <td>500</td>
+                                                        <td>6.11% <i class="zmdi zmdi-trending-down text-warning"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>UK</td>
+                                                        <td>1,500</td>
+                                                        <td>1,971</td>
+                                                        <td>8.50% <i class="zmdi zmdi-trending-up text-success"></i></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Other</td>
+                                                        <td>4,236</td>
+                                                        <td>4,591</td>
+                                                        <td>9.15% <i class="zmdi zmdi-trending-up text-success"></i></td>
+                                                    </tr>                                            											
+                                                </tbody>
+                                            </table>                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            </div> -->
+
+                <br><br>
+                <div class="container">
+                    <!-- Dynamic Table Full -->
+                    <div class="section-content section-content-boxed">
+                        <div class="block">
+                            <div class="block-header block-header-default">
+                                <h4 class="block-title title">Registered Users</h4>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                                <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th>Name</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 27%;">Nodal Center</th>
+                                            <th class="text-center" style="width: 21%;">Course</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 25%;">Email</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="user : ${userList}">
+                                            <td class="text-center" th:utext="${user.userId}"></td>
+                                            <td class="font-w600" th:utext="${user.firstName}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${user.discipline}"></td>
+                                            <td class="text-center" th:utext="${user.course}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${user.email}"></td>
+                                        </tr>
+                                        <!-- <tr>
+                                    <td class="text-center">2</td>
+                                    <td class="font-w600">Dhrumil Gohil</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">dhrumilgohil@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td class="font-w600">Krunal Prajapati</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">krunalprajapati@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td class="font-w600">Yash Unadkat</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">yashunadkat@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">5</td>
+                                    <td class="font-w600">Devanshi Shah</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">devanshishah@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">6</td>
+                                    <td class="font-w600">Amey Satwe</td>
+                                    <td class="d-none d-sm-table-cell">PVG's COET, Pune</td>
+                                    <td class="text-center">Chemical Engineering</td>
+                                    <td class="d-none d-sm-table-cell">ameysatwe@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">7</td>
+                                    <td class="font-w600">Yash Mehta</td>
+                                    <td class="d-none d-sm-table-cell">PVG's COET, Pune</td>
+                                    <td class="text-center">Computer Engineering</td>
+                                    <td class="d-none d-sm-table-cell">yashmehta@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">8</td>
+                                    <td class="font-w600">Divy Thakkar</td>
+                                    <td class="d-none d-sm-table-cell">IIT Bombay, Mumbai</td>
+                                    <td class="text-center">Computer Engineering</td>
+                                    <td class="d-none d-sm-table-cell">divythakkar@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">9</td>
+                                    <td class="font-w600">Dhruvraj Zala</td>
+                                    <td class="d-none d-sm-table-cell">IIM, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">dhruvrajzala@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">10</td>
+                                    <td class="font-w600">Dhruvin Thakkar</td>
+                                    <td class="d-none d-sm-table-cell">IIM, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">dhruvinthakkar@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">11</td>
+                                    <td class="font-w600">Keyur Thakkar</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">keyurthakkar@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">12</td>
+                                    <td class="font-w600">Dhrumil Gohil</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">dhrumilgohil@gmail.com</td>  
+                                </tr>
+                                <tr>
+                                    <td class="text-center">13</td>
+                                    <td class="font-w600">Krunal Prajapati</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">krunalprajapati@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">14</td>
+                                    <td class="font-w600">Yash Unadkat</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">yashunadkat@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">15</td>
+                                    <td class="font-w600">Devanshi Shah</td>
+                                    <td class="d-none d-sm-table-cell">Gujarat University, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">devanshishah@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">16</td>
+                                    <td class="font-w600">Amey Satwe</td>
+                                    <td class="d-none d-sm-table-cell">PVG's COET, Pune</td>
+                                    <td class="text-center">Chemical Engineering</td>
+                                    <td class="d-none d-sm-table-cell">ameysatwe@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">17</td>
+                                    <td class="font-w600">Yash Mehta</td>
+                                    <td class="d-none d-sm-table-cell">PVG's COET, Pune</td>
+                                    <td class="text-center">Computer Engineering</td>
+                                    <td class="d-none d-sm-table-cell">yashmehta@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">18</td>
+                                    <td class="font-w600">Divy Thakkar</td>
+                                    <td class="d-none d-sm-table-cell">IIT Bombay, Mumbai</td>
+                                    <td class="text-center">Computer Engineering</td>
+                                    <td class="d-none d-sm-table-cell">divythakkar@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">19</td>
+                                    <td class="font-w600">Dhruvraj Zala</td>
+                                    <td class="d-none d-sm-table-cell">IIM, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">dhruvrajzala@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">20</td>
+                                    <td class="font-w600">Dhruvin Thakkar</td>
+                                    <td class="d-none d-sm-table-cell">IIM, Ahmedabad</td>
+                                    <td class="text-center">MBA</td>
+                                    <td class="d-none d-sm-table-cell">dhruvinthakkar@gmail.com</td>
+                                </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END Dynamic Table Full -->
+                    </div>
+                </div>
+
+                <br><br>
+                <div class="container">
+                    <!-- Dynamic Table Full -->
+                    <div class="section-content section-content-boxed">
+                        <div class="block">
+                            <div class="block-header block-header-default">
+                                <h4 class="block-title title">User Suggestions</h4>
+                            </div>
+                            <div class="block-content block-content-full">
+                                <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                                <table class="table table-bordered table-striped table-vcenter js-dataTable-full">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th>Email</th>
+                                            <th class="text-center" style="width: 17%;">Date</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 25%;">Subject</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 32%;">Message</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="suggestion : ${suggestions}">
+                                            <td class="text-center" th:utext="${suggestion.suggesionId}"></td>
+                                            <td class="font-w600" th:utext="${suggestion.email}"></td>
+                                            <td class="text-center"
+                                                th:utext="${#dates.format(suggestion.createdDate, 'dd-MMM-yyyy')}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${suggestion.subject}"></td>
+                                            <td class="d-none d-sm-table-cell" th:utext="${suggestion.message}"></td>
+                                        </tr>
+                                        <!-- <tr>
+                                    <td class="text-center">2</td>
+                                    <td class="font-w600">Dhrumil Gohil</td>
+                                    <td class="text-center">Apr 20, 2021</td>
+                                    <td class="d-none d-sm-table-cell">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">dhrumilgohil@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">3</td>
+                                    <td class="font-w600">Krunal Prajapati</td>
+                                    <td class="text-center">Apr 22, 2021</td>
+                                    <td class="d-none d-sm-table-cell">M.Sc. (CA & IT)</td>
+                                    <td class="d-none d-sm-table-cell">krunalprajapati@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">4</td>
+                                    <td class="font-w600">Yash Unadkat</td>
+                                    <td class="text-center">Apr 28, 2021</td>
+                                    <td class="d-none d-sm-table-cell">MBA</td>
+                                    <td class="d-none d-sm-table-cell">yashunadkat@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">5</td>
+                                    <td class="font-w600">Devanshi Shah</td>
+                                    <td class="text-center">May 1, 2021</td>
+                                    <td class="d-none d-sm-table-cell">MBA</td>
+                                    <td class="d-none d-sm-table-cell">devanshishah@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center">6</td>
+                                    <td class="font-w600">Amey Satwe</td>
+                                    <td class="text-center">May 5, 2021</td>
+                                    <td class="d-none d-sm-table-cell">Chemical Engineering</td>
+                                    <td class="d-none d-sm-table-cell">ameysatwe@gmail.com</td>
+                                </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- END Dynamic Table Full -->
+                    </div>
+                </div>
+
+            </section><!-- .section -->
+        </main><!-- .nk-pages -->
+
+        <footer class="nk-footer bg-dark tc-light has-overlay">
+            <div class="overlay shape shape-c"></div><!-- Overlay Shape -->
+            <section class="section section-footer section-m tc-light">
+                <div class="container">
+                    <div class="nk-footer-top">
+                        <div class="row g-gs gy-m">
+                            <div class="col-lg-3 col-md-9 mr-auto">
+                                <div class="wgs wgs-about">
+                                    <div class="wgs-logo logo">
+                                        <a href="./" class="logo-link">
+                                            <img src="images/logo-white.svg" srcset="images/logo-white2x.svg 2x"
+                                                alt="logo">
+                                        </a>
+                                    </div>
+                                    <div class="wgs-about-text">
+                                        <p>Indian Institute Of Technology Bombay</p>
+                                        <p>Powai, Mumbai, India</p>
+                                    </div>
+                                    <ul class="wgs-social">
+                                        <li><a href="#"><em class="icon ni ni-facebook-f"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-twitter"></em></a></li>
+                                        <li><a href="#"><em class="icon ni ni-youtube-fill"></em></a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-2">
+                                <div class="wgs wgs-menu">
+                                    <!-- <h6 class="wgs-title">Quick Link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a class="scrollto" href="#symptoms">Explore Labs</a></li>
+                                        <li><a class="scrollto" href="#protect">Vlabs Team</a></li>
+                                        <li><a class="scrollto" href="#about">About Vlabs</a></li>
+                                        <li><a class="scrollto" href="#faq">Suggestion Space</a></li>
+                                    </ul> -->
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                            <div class="col-sm-4 col-lg-3">
+                                <div class="wgs wgs-menu">
+                                    <h6 class="wgs-title">Helpfull link</h6>
+                                    <ul class="wgs-links">
+                                        <li><a href="#">Vlabs IIT Bombay</a></li>
+                                        <li><a href="#">Vlabs Dev</a></li>
+                                        <li><a href="#">Vlabs Outreach</a></li>
+                                        <li><a href="#">Shakshat Portal</a></li>
+                                    </ul>
+                                </div><!-- .wgs -->
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-top -->
+                    <div class="nk-footer-bottom">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="nk-copyright">&copy; 2021 Virtual Labs. Made by <a
+                                        href="https://thakkarkeyur.blogspot.com/" target="_blank">Keyur Thakkar</a>.</p>
+                            </div><!-- .col -->
+                            <div class="col-md-6">
+                                <ul class="nk-footer-links justify-content-md-end">
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div><!-- .col -->
+                        </div><!-- .row -->
+                    </div><!-- .nk-footer-bottom -->
+                </div><!-- .container -->
+            </section><!-- .section -->
+        </footer><!-- .nk-footer -->
+    </div><!-- .nk-wrap -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js?ver=112"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/jvectormap.bundle.js"></script> <!-- JVectorMap Plugin Js -->
+    <!--<script src="plugins/datatables/datatables.js"></script>--> <!-- Datatable Plugin Js -->
+
+    <!-- Page JS Plugins -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page JS Code -->
+    <script src="js/be_tables_datatables.min.js"></script>
+
+</body>
+
+</html>
